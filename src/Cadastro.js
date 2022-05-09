@@ -17,14 +17,15 @@ export default function Cadastro(){
             axios.post(URL, {'nome': name, 'email': email, 'senha': senha})
             .then((response) => {
                 console.log(response);
+                window.location.href='/login';
             })
             .catch((err) => console.log(err));
         }else alert('as senhas não correspodem!');
     }
     return (
-        <PaginaForm pos={'center'} onSubmit={(event) => {event.preventDefault()}}>
+        <PaginaForm pos={'center'}>
             <h1>MyWallet</h1>
-            <form>
+            <form onSubmit={(event) => {event.preventDefault()}}>
                 <input type='text' required placeholder="nome" onChange={(event) => setName(event.target.value)}></input>
                 <input type='email'required placeholder="email" onChange={(event) => setEmail(event.target.value)}></input>
                 <input type='password' required placeholder="senha" onChange={(event) => setSenha(event.target.value)}></input>

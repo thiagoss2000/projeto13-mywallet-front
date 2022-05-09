@@ -15,14 +15,15 @@ export default function Login(){
         axios.post(URL, {'email': email, 'senha': senha})
         .then((response) => {
             sessionStorage.setItem('token', response.data);
+            sessionStorage.setItem('user', email);
             window.location.href ='/'
         })
         .catch((err) => console.log(err))
     }    
     return (
-        <PaginaForm pos={'center'} onSubmit={(event) => {event.preventDefault()}}>
+        <PaginaForm pos={'center'}>
             <h1>MyWallet</h1>
-            <form>
+            <form onSubmit={(event) => {event.preventDefault()}}>
                 <input type='email' required placeholder="email" onChange={(event) => setEmail(event.target.value)}></input>
                 <input type='password' required placeholder="senha" onChange={(event) => setSenha(event.target.value)}></input>
                 <button type='submit' onClick = {() => EnviarLogin()}>Entrar</button>

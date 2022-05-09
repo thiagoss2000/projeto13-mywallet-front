@@ -156,6 +156,9 @@ export const DivHome = styled.div `
         left: 10px;
         top: 10px;
     }
+    .link {
+        text-decoration-line: none;
+    }
 `
 export const Movimento = styled.p`
     margin-top: 23px;
@@ -177,9 +180,15 @@ export const Movimento = styled.p`
     span:last-child {
         color: red;
         position: absolute;
-        right: 12px;
+        right: 31px;
         font-family: 'Raleway';
         font-style: normal;
         color: ${(props) => props.tipo? '#03AC00' : '#C70000'};
+    }
+    .delete {
+        position: absolute;
+        right: 10px;
+        color: #C6C6C6;
+        cursor: pointer;
     }
 `

@@ -25,7 +25,7 @@ export default function Novo(){
         <PaginaForm pos={'flex-start'}>
             <h2>Nova entrada</h2>
             <form onSubmit={(event) => {event.preventDefault()}}>
-                <input type='text' required placeholder="Valor" onChange={(event) => setValor(parseInt(event.target.value).toFixed(2))}></input>
+                <input type='text' required placeholder="Valor" onChange={(event) => setValor(parseFloat(event.target.value))}></input>
                 <input type='text' required placeholder="Descrição" onChange={(event) => setDescricao(event.target.value)}></input>
                 <button type='submit' onClick = {() => EnviarMovimentacao()}>Cadastrar</button>
             </form>

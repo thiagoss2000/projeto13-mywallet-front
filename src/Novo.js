@@ -6,7 +6,7 @@ import { PaginaForm } from './styled';
 
 export default function Novo(){
     const { tipo } = useContext(AuthContext);
-    const URL = "http://localhost:5000/move";
+    const URL = "https://projeto14-mywallet-back.herokuapp.com/move";
 
     const [valor, setValor] = useState();
     const [descricao, setDescricao] = useState(); 

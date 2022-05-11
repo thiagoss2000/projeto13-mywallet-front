@@ -3,7 +3,7 @@ import { AuthContext } from "./context";
 import { useEffect, useState } from "react";
 import axios from 'axios';
 import { DivHome, Movimento } from './styled';
-import { Link, Navigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import sairImg from "./assets/Vector.png"
 import addImg from "./assets/ant-design_plus-circle-outlined.png"
 import subImg from "./assets/ant-design_minus-circle-outlined.png"
@@ -14,7 +14,7 @@ export default function Home(){
 
     const [movimentacao, setMovimentacao] = useState([]);
     const token = sessionStorage.token;
-    const URL = "http://localhost:5000/move";
+    const URL = "https://projeto14-mywallet-back.herokuapp.com/move";
     const header = {'user': sessionStorage.user, 'token': sessionStorage.token};
     
     useEffect(() => {
@@ -53,8 +53,8 @@ export default function Home(){
                 </div>
                 <h6>SALDO<span>{saldo.toFixed(2)}</span></h6>
             </div>
-            <Link to='/new'><button onClick= {() => setTipo(true)}><h8 className='but'>Nova Entrada</h8><img className="operador" src={addImg} alt=''></img></button></Link>
-            <Link to='/new'><button onClick= {() => setTipo(false)}><h8 className='but'>Nova Saída</h8><img className="operador" src={subImg} alt=''></img></button></Link>
+            <Link to='/new'><button onClick= {() => setTipo(true)}><h6 className='but'>Nova Entrada</h6><img className="operador" src={addImg} alt=''></img></button></Link>
+            <Link to='/new'><button onClick= {() => setTipo(false)}><h6 className='but'>Nova Saída</h6><img className="operador" src={subImg} alt=''></img></button></Link>
         </DivHome>
     );
 }

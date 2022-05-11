@@ -5,7 +5,6 @@ import Cadastro from "./Cadastro";
 import Novo from "./Novo";
 import Editar from "./Editar";
 import Home from "./Home";
-// import styled from "styled-components";
 
 function App() {
   return (
@@ -23,11 +22,4 @@ function App() {
   );
 }
 
-// const Pagina = styled.div`
-//     width: 375px;
-//     height: 667px;
-//     background: #8C11BE;
-//     display: flex;
-//     justify-content: center;
-// `
 export default App;

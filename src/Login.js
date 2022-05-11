@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
-import { Link, Navigate, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import axios from 'axios';
 import { PaginaForm } from './styled';
 
-
 export default function Login(){
-    const URL = "http://localhost:5000/sign-in";
+    const URL = "https://projeto14-mywallet-back.herokuapp.com/sign-in";
 
     const [email, setEmail] = useState();
     const [senha, setSenha] = useState(); 

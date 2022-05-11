@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { Link, Navigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import axios from 'axios';
 import { PaginaForm } from './styled';
 
 export default function Cadastro(){
-    const URL = "http://localhost:5000/sign-up";
+    const URL = "https://projeto14-mywallet-back.herokuapp.com/sign-up";
 
     const [name, setName] = useState();
     const [email, setEmail] = useState();

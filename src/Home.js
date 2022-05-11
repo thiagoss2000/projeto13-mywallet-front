@@ -51,7 +51,7 @@ export default function Home(){
                         return <Link className="link" key={el._id} to='/replace' onClick= {() => setUpdate(el._id)}><Movimento tipo={el.tipo}><span>{el.date}</span>{el.descricao}<span className="delete" onClick={() => deletMov(el._id)}>x</span><span>{el.valor}</span></Movimento></Link>
                     })}
                 </div>
-                <h8>SALDO<span>{saldo.toFixed(2)}</span></h8>
+                <h6>SALDO<span>{saldo.toFixed(2)}</span></h6>
             </div>
             <Link to='/new'><button onClick= {() => setTipo(true)}><h8 className='but'>Nova Entrada</h8><img className="operador" src={addImg} alt=''></img></button></Link>
             <Link to='/new'><button onClick= {() => setTipo(false)}><h8 className='but'>Nova Saída</h8><img className="operador" src={subImg} alt=''></img></button></Link>

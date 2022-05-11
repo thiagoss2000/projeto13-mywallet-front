@@ -127,7 +127,7 @@ export const DivHome = styled.div `
         position: relative;
         cursor: pointer;
     }
-    h8 {
+    h6 {
         width: 90%;
         position: absolute;
         bottom: 10px;
